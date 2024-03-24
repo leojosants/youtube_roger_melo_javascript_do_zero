@@ -1,5 +1,7 @@
-let anoAtual = 2023;
+const anoAtual = 2023;
 const anoNascimento = 1984;
-let idade = anoAtual - anoNascimento;
+const idade = anoAtual - anoNascimento;
+const novoAnoNascimento = anoNascimento + 1;
+const novaIdade = anoAtual - novoAnoNascimento;
 
-console.log(idade);
+console.log(novaIdade);
