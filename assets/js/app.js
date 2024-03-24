@@ -1,21 +1,27 @@
-const anoAtual = 2024;
-const anoNascimento = 1984;
-const idade = anoAtual - anoNascimento;
-const nome = 'Leonardo';
+/*
+    tipos primitivos
+        - number
+        - null
+        - undefined
+        - boolean
+        - string
+        - bigint
+        - symbol
+        - objeto
+            - objetos literais
+            - arrays
+            - funções
+*/
 
-// aspas simples - ''
-// const frase = 'Meu nome é ' + nome + ' e tenho ' + idade + ' anos.';
+const microfone = {
+    cor: 'preto',
+    marca: 'Fifine',
+    preco: 397.97,
+};
 
-// aspas duplas - ""
-// const frase = "Meu nome é " + nome + " e tenho " + idade + " anos.";
+const corMicrofone = microfone.cor;
+const marcaMicrofone = microfone.marca;
+const precoMicrofone = microfone.preco;
+const novoPrecoMicrofone = (microfone.preco - 100);
 
-// template strings - ``
-const frase = `Meu nome é ${nome} e tenho ${idade} anos.`;
-
-// escape de caracteres - \\
-// const frase2 = "Ela disse \"Olá\"!";
-const frase2 = `Ela disse "Olá"!`;
-
-console.log(frase);
-console.log(frase2);
-console.log(nome[0]);
+console.log(novoPrecoMicrofone);
