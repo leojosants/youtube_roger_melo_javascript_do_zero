@@ -1,1 +1,1 @@
-# youtube_roger_melo_javascript_do_zero
+# Curso de JavaScript para iniciantes
