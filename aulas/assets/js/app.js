@@ -1,61 +1,61 @@
 /*
-    const obj = {
-        propriedade: 'valor',
-        metodo: function (x) {
-            return x;
-        },
-    };
+    let ehMaiorDeIdade = null;
+    const idade = 18;
 
-    console.log(obj.metodo(4));
+    console.log(ehMaiorDeIdade);
+
+    if (idade>=18) {
+        ehMaiorDeIdade = true;
+    }
+    else {
+        ehMaiorDeIdade = false;
+    }
+
+    console.log(ehMaiorDeIdade);
 */
 
 /*
-    const obj = {
-        propriedade: 'valor',
-        metodo(x) {
-            return x;
-        },
-    };
+    const pegaMaiorIdade = (idade) => {
+        if (idade >= 18) return true;
+        return false;
+    }
 
-    console.log(obj.metodo(4));
+    const idade17 = 17;
+    const idade18 = 18;
+
+    console.log(pegaMaiorIdade(idade17));
+    console.log(pegaMaiorIdade(idade18));
+*/
+
+/* 
+    let x;
+
+    // undefined
+    console.log(x === undefined);
 */
 
 /*
-    const obj = {
-        propriedade: 'valor',
-        metodo(x) {
-            this.propriedade = x;
-        },
-    };
+    const x = (y) => console.log(y);
 
-    obj.metodo(3);
-
-    console.log(obj.propriedade);
+    // undefined
+    console.log(x() === undefined);
 */
 
 /*
-    const obj = {
-        propriedade: 'valor',
-        metodo: (x) => {
-            console.log(this);
-            this.propriedade = x;
-        },
+    const pegaEmail = (email) => {
+        // return `email: ${email}`;
+
+        // undefined
+        `email: ${email}`;
     };
 
-    obj.metodo(3);
-
-    console.log(obj.propriedade);
+    console.log(pegaEmail('leo@gmail.com'));
 */
 
-const obj = {
-    propriedade:'valor',
-    propriedade2:'valor2',
+const musica = {
+    nome: 'Nome da musica',
+    banda: 'Nome da banda',
 };
 
-const obj2 = {
-    ...obj,
-    propriedade2:1
-};
-
-console.log('obj...:',obj);
-console.log('obj2..:',obj2);
+// undefined
+console.log(musica.ano === undefined);
