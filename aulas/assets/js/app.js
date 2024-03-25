@@ -1,46 +1,66 @@
-/*
-    const x = () => { };
+/* operador && - and 
 
-    x();
+    const x = 3;
+    const y = 7;
+
+    const resultado = (x === 3 && y === 7);
+
+    console.log(resultado);
 */
 
-/*
-    function pegaMensagem(nome) {
-        return `Meu nome é ${nome}!`;
-    }
+/* operador || - or 
 
-    const pegaMensagem2 = (nome) => {
-        return `Meu nome é ${nome}!`;
-    }
+    const x = 3;
+    const y = 7;
 
-    const pegaMensagem3 = (nome) => `Meu nome é ${nome}!`;
+    const resultado = (x !== 3 || y === 7);
 
-    const nome = 'Leonardo';
-    const nome2 = 'Leo';
-    const nome3 = 'João';
-
-    console.log(pegaMensagem(nome));
-    console.log(pegaMensagem2(nome2));
-    console.log(pegaMensagem3(nome3));
+    console.log(resultado);
 */
 
-/*
-    const pegaObj = (param1, param2) => {
-        return {
-            prop1: param1,
-            prop2: param2,
-        };
+/* estrutura condicional - if 
+
+    const x = 3;
+    const y = 7;
+    let w = 0;
+
+    if (x === 3 && y === 7) {
+        w++;
+    }
+    
+    console.log(w);
+    */
+
+/* estrutura condicional - else
+
+    const x = 3;
+    const y = 7;
+    let w = 0;
+
+    if (x === 3 && y === '7') {
+        w++;
+    }
+    else {
+        w--;
     }
 
-    const pegaObj2 = (param1, param2) => ({ prop1: param1, prop2: param2 });
-
-    console.log(pegaObj(1, 2));
-    console.log(pegaObj2(1, 2));
+    console.log(w);
 */
 
-const pegaMensagem = (nome) => `Meu nome é ${nome}!`;
-const pegaMensagem2 = nome => `Meu nome é ${nome}!`;
-const nome = 'Leo';
+/* estrutura condicional - else if */
 
-console.log(pegaMensagem(nome));
-console.log(pegaMensagem2(nome));
+const x = 3;
+const y = 7;
+let w = 0;
+
+if (x === 3 && y === '7') {
+    w++;
+}
+else if (x === '3') {
+    w = 5;
+}
+else {
+    w = 9;
+}
+
+console.log(w);
