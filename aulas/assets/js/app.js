@@ -1,33 +1,61 @@
-const serie = {
-    nome: 'Game of Thrones',
-    temporadas: 8,
-};
+/*
+    const listaCompras = ['abacaxi', 'maças', 'torradas'];
 
-// atribuição
-serie.temporadas = 10;
+    console.log(listaCompras);
 
-// Uncaught TypeError: Assignment to constant variable.
-// serie = 'filme';
+    console.log(listaCompras[0]);
+    console.log(listaCompras[1]);
+    console.log(listaCompras[2]);
+    console.log(listaCompras[1 + 1]);
 
-// criação
-serie.episodios = 73;
+    listaCompras[0] = 'limão';
 
-const frase = `
-A série ${serie.nome} tem ${serie.temporadas} temporadas e ${serie.episodios} episódios.
-`;
+    console.log(listaCompras);
+*/
 
-const serie2 = {};
+/*
+    const compras = [];
 
-serie2.nome = 'Game of Thrones';
-serie2.episodios = 53;
-serie2.temporadas = 6;
+    console.log(compras);
 
-const pessoa = {
-    nome: 'Leonardo',
-    peso: 76,
-    altura: 1.70,
-    idade: 39,
-}
+    compras[0] = 'abacaxi';
 
-console.log(frase);
-console.log(serie2);
+    console.log(compras);
+*/
+
+/*
+    const jogo = {
+        nome: 'The Last of Us Part II',
+        ano: 2020,
+    }
+
+    const informacoesJogo = ['The Last of Us Part II', 2020];
+
+    console.log(jogo.ano);
+    console.log(informacoesJogo[1]);
+*/
+
+const series = [
+    {
+        nome: 'Chernobyl',
+        ano: 2019,
+    },
+    {
+        nome: 'Braking Bad',
+        ano: 2009,
+    },
+];
+
+series[1].ano = 2010;
+series[0].emissora = 'HBO';
+series[1].emissora = 'Max';
+
+console.log(series);
+console.log(series[0].nome);
+console.log(series[0].ano);
+console.log(series[0].emissora);
+console.log(series[0]);
+console.log(series[1]);
+console.log(series[1].nome);
+console.log(series[1].ano);
+console.log(series[1].emissora);
