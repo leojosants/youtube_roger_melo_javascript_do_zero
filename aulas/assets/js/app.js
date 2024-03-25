@@ -1,21 +1,26 @@
 /*
-    let number = 7;
+    let numero = 7;
 
-    console.log('number:',number);
+    numero += 5;
+    numero -= 3;
+    numero *= 2;
+    numero /= 2;
+    numero--;
+    numero++;
 
-    console.log('number++:', number++);
-
-    console.log('number:',number);
-
-    console.log('++number:', ++number);
+    console.log(numero);
 */
 
-let number = 7;
+/*
+    const x = '1';
 
-console.log('number:', number);
+    console.log('x == 1...:', x == 1);
+    console.log('x === 1..:', x === 1);
+    console.log('x != "2".:', x != '2');
+    console.log('x !== "2":', x !== '1');
+*/
 
-console.log('number--:', number--);
-
-console.log('number:', number);
-
-console.log('--number:', --number);
+console.log('7 > 3:', 7 > 3);
+console.log('7 >= 3:', 7 >= 3);
+console.log('7 < 3:', 7 < 3);
+console.log('7 <= 3:', 7 <= 3);
