@@ -1,66 +1,61 @@
-/* operador && - and 
+/*
+    const obj = {
+        propriedade: 'valor',
+        metodo: function (x) {
+            return x;
+        },
+    };
 
-    const x = 3;
-    const y = 7;
-
-    const resultado = (x === 3 && y === 7);
-
-    console.log(resultado);
+    console.log(obj.metodo(4));
 */
 
-/* operador || - or 
+/*
+    const obj = {
+        propriedade: 'valor',
+        metodo(x) {
+            return x;
+        },
+    };
 
-    const x = 3;
-    const y = 7;
-
-    const resultado = (x !== 3 || y === 7);
-
-    console.log(resultado);
+    console.log(obj.metodo(4));
 */
 
-/* estrutura condicional - if 
+/*
+    const obj = {
+        propriedade: 'valor',
+        metodo(x) {
+            this.propriedade = x;
+        },
+    };
 
-    const x = 3;
-    const y = 7;
-    let w = 0;
+    obj.metodo(3);
 
-    if (x === 3 && y === 7) {
-        w++;
-    }
-    
-    console.log(w);
-    */
-
-/* estrutura condicional - else
-
-    const x = 3;
-    const y = 7;
-    let w = 0;
-
-    if (x === 3 && y === '7') {
-        w++;
-    }
-    else {
-        w--;
-    }
-
-    console.log(w);
+    console.log(obj.propriedade);
 */
 
-/* estrutura condicional - else if */
+/*
+    const obj = {
+        propriedade: 'valor',
+        metodo: (x) => {
+            console.log(this);
+            this.propriedade = x;
+        },
+    };
 
-const x = 3;
-const y = 7;
-let w = 0;
+    obj.metodo(3);
 
-if (x === 3 && y === '7') {
-    w++;
-}
-else if (x === '3') {
-    w = 5;
-}
-else {
-    w = 9;
-}
+    console.log(obj.propriedade);
+*/
 
-console.log(w);
+const obj = {
+    propriedade:'valor',
+    propriedade2:'valor2',
+};
+
+const obj2 = {
+    ...obj,
+    propriedade2:1
+};
+
+console.log('obj...:',obj);
+console.log('obj2..:',obj2);
