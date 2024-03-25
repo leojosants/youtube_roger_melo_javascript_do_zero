@@ -1,33 +1,21 @@
 /*
-    const trimestres = [
-        ['Janeiro', 'Fevereiro', 'Março'],
-        ['Abril', 'Maio', 'Junho'],
-        ['Julho', 'Agosto', 'Setembro'],
-    ];
+    let number = 7;
 
-    trimestres[3] = ['Outubro', 'Novembro', 'Dezembro'];
+    console.log('number:',number);
 
-    console.log(trimestres);
-    console.log(trimestres[2][1]);
-    console.log(trimestres[2][1][0]);
+    console.log('number++:', number++);
+
+    console.log('number:',number);
+
+    console.log('++number:', ++number);
 */
 
-/*
-    const pokemon = {
-        nome: 'Picachu',
-        tipos: ['Fogo', 'Voador'],
-    };
+let number = 7;
 
-    console.log(pokemon);
-    console.log(pokemon.nome);
-    console.log(pokemon['nome']);
-    console.log(pokemon.tipos[1]);
-*/
+console.log('number:', number);
 
-const cidade = {
-    nome: 'SJDR',
-    climaEnsolarado: false,
-}
+console.log('number--:', number--);
 
-console.log(cidade);
-console.log(cidade.climaEnsolarado);
+console.log('number:', number);
+
+console.log('--number:', --number);
