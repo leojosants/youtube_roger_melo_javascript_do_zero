@@ -36,69 +36,71 @@ function y() {
     
     Declare uma variável contador e atribua o número um a ela. 
 */
-let contador = 1;
+const contador = 1;
 
 
 /*
     03
     
-    Crie uma função multiplicaContador que faz a variável 
+    Crie uma função pegaContadorMultiplicado que faz a variável 
     contador receber o resultado de contador multiplicado 
     por cem.
     
     Use o operador abreviado para fazer a reatribuição.
 */
-function multiplicaContador() {
-    contador *= 100;
+function pegaContadorMultiplicado() {
+    return contador * 100;
 }
 
 
 /*
     04
     
-    Crie uma função divideContador que faz a variável 
+    Crie uma função pegaContadorDividido que faz a variável 
     contador receber o resultado de contador dividido 
     por quatro.
     
     Use o operador abreviado para fazer a reatribuição.
 */
-function divideContador() {
-    contador /= 4;
+function pegaContadorDividido() {
+    return contador / 4;
 }
 
 
 /*
     05
     
-    Crie uma função incrementaContador que incrementa o contador 
+    Crie uma função pegaContadorIncrementado que incrementa o contador 
     em um.
     
     Use o operador de pré incremento.
 */
-function incrementaContador() {
-    contador++;
+function pegaContadorIncrementado() {
+    return contador + 1;
 }
 
 
 /*
     06
     
-    Crie uma função decrementaContador que decrementa o contador 
+    Crie uma função pegaContadorDecrementado que decrementa o contador 
     em um.
     
     Use o operador de pré decremento.
 */
-function decrementaContador() {
-    contador--;
+function pegaContadorDecrementado() {
+    return contador - 1;
 }
 
 
 /*
     07
     
-    Execute a função multiplicaContador.
+    Execute a função pegaContadorMultiplicado.
 */
-multiplicaContador(); //100
+pegaContadorMultiplicado(); // 100
+
+console.log(contador);
 
 
 /*
@@ -121,7 +123,7 @@ function pegaSetenta() {
     da propriedade numero é maior ou igual a contador.
 */
 const recebeNumero = pegaSetenta().numero;
-const ResultadoDaComparacaoMaiorOuIgual = recebeNumero >= contador;
+const resultadoDaComparacaoMaiorOuIgual = recebeNumero >= contador;
 
 
 /*
@@ -129,7 +131,7 @@ const ResultadoDaComparacaoMaiorOuIgual = recebeNumero >= contador;
     
     Divida o contador por quatro usando a função que você criou.
 */
-divideContador(); // 25
+pegaContadorDividido(); // 25
 
 
 /*
@@ -137,7 +139,7 @@ divideContador(); // 25
     
     Incremente o contador em um usando a função que você criou.
 */
-incrementaContador(); // 26
+pegaContadorIncrementado(); // 26
 
 
 /*
@@ -145,14 +147,13 @@ incrementaContador(); // 26
     
     Decremente o contador em um usando a função que você criou.
 */
-decrementaContador(); // 25
+pegaContadorDecrementado(); // 25
 
 
 /*
     13
     
-    Crie uma função pegaNumeros que exporta os números 34, 
-    95 e 37.
+    Crie uma função pegaNumeros que exporta os números 34, 95 e 37.
     
     Dica:
     
