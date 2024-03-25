@@ -32,9 +32,9 @@
     let?
 */
 
-// let marca = ['Apple', 'Sony', 'Samsung', 'Microsoft'];
-const marca = ['Apple', 'Sony', 'Samsung', 'Microsoft'];
-console.log(`Marcas de Produtos: ${marca}`);
+// let marcas = ['Apple', 'Sony', 'Samsung', 'Microsoft'];
+const marcas = ['Apple', 'Sony', 'Samsung', 'Microsoft'];
+console.log(`Marcas de Produtos: ${marcas}`);
 
 /*
     02 - Qual possibilidade de melhoria você vê no código abaixo?
@@ -53,7 +53,7 @@ console.log(`Marcas de Produtos: ${marca}`);
 // const temaAbertura = `I'll Be There for You`;
 // const elencoPrincipal = ['Jennifer Aniston', 'Courteney Cox', 'Lisa Kudrow', 'Matt LeBlanc', 'Matthew Perry', 'David Schwimmer'];
 
-const informacaoSerie = {
+const informacoesDaSerie = {
     nome: 'Friends',
     tempotadas: 10,
     episodios: 236,
@@ -68,7 +68,7 @@ const informacaoSerie = {
     ],
 };
 
-console.log('Série:', informacaoSerie);
+console.log('Série:', informacoesDaSerie);
 
 
 /*
@@ -87,14 +87,14 @@ console.log('Série:', informacaoSerie);
 //     fruta4: 'uva'
 // };
 
-const listaFrutas = [
+const listaDeFrutas = [
     'banana',
     'maçã',
     'pera',
-    'uva'
+    'uva',
 ];
 
-console.log(`Frutas: ${listaFrutas}`);
+console.log(`Frutas: ${listaDeFrutas}`);
 
 
 /*
@@ -139,7 +139,7 @@ banda.generos = [
     'Blues',
     'Rock-folk',
     'Rock',
-    'Heavy Metal'
+    'Heavy Metal',
 ];
 
 console.log(`Generos da banda: ${banda.generos}`);
@@ -207,18 +207,18 @@ console.log('Albuns da banda:', banda.albuns);
     do album Physical Graffiti para 1976.
 */
 
-const anoAlbumBandaAntesAlterar = banda.albuns[1].ano;
+const anoDoAlbumDaBandaAntesDeAlterar = banda.albuns[1].ano;
 
 banda.albuns[1].ano = 1976;
 
-const anoAlbumBandaDepoisAlterar = banda.albuns[1].ano;
+const anoDoAlbumDaBandaDepoisDeAlterar = banda.albuns[1].ano;
 
 console.log(
-    `Ano do Album '${banda.albuns[1].nome}' antes de alterar: ${anoAlbumBandaAntesAlterar}`
+    `Ano do Album '${banda.albuns[1].nome}' antes de alterar: ${anoDoAlbumDaBandaAntesDeAlterar}`
 );
 
 console.log(
-    `Ano do Album '${banda.albuns[1].nome}' depois de alterar: ${anoAlbumBandaDepoisAlterar}`
+    `Ano do Album '${banda.albuns[1].nome}' depois de alterar: ${anoDoAlbumDaBandaDepoisDeAlterar}`
 );
 
 
@@ -255,10 +255,10 @@ const pokemon = {
     ]
 }
 
-const primeiroCaractere = pokemon.moves[0].versionGroupDetails[1].versionGroup.url[0];
+const primeiroCaractereDaURL = pokemon.moves[0].versionGroupDetails[1].versionGroup.url[0];
 
 console.log(
-    `O primeiro caractere do valor da propriedade 'url' do objeto 'versionGroup' é: ${primeiroCaractere}`
+    `O primeiro caractere do valor da propriedade 'url' do objeto 'versionGroup' é: ${primeiroCaractereDaURL}`
 );
 
 
@@ -266,7 +266,7 @@ console.log(
     11 - Declare uma constante chamada paragrafo que armazene o parágrafo 
     abaixo.
 
-    Nesta bateria de exercícios vimos que marca armazena um array no qual o segundo item é _MARCA_, um dos gêneros da banda _NOME_DA_BANDA_ é _GENERO_DA_BANDA_ e que a propriedade moveLearnMethod do Articuno contém um objeto com uma propriedade name que armazena "_VALOR_DA_PROPRIEDADE_".
+    Nesta bateria de exercícios vimos que marcas armazena um array no qual o segundo item é _MARCA_, um dos gêneros da banda _NOME_DA_BANDA_ é _GENERO_DA_BANDA_ e que a propriedade moveLearnMethod do Articuno contém um objeto com uma propriedade name que armazena "_VALOR_DA_PROPRIEDADE_".
 
     O parágrafo acima contém placeholders no formato _BLABLABLA_.
 
@@ -275,20 +275,22 @@ console.log(
     pedindo. 
 
     Exemplo: o placeholder _MARCA_ deve ser substituído pela 
-    expressão que retorna o segundo item do array marca. 
+    expressão que retorna o segundo item do array marcas. 
 
     O placeholder _GENERO_DA_BANDA_ deve ser substituído pela 
     expressão que retorna o 4º item do array generos.
 
     Seu parágrafo final deve ficar assim:
 
-    Nesta bateria de exercícios vimos que marca armazena um array no qual o segundo item é "Sony", um dos gêneros da banda Led Zeppelin é Rock e que a propriedade moveLearnMethod do Articuno contém um objeto com uma propriedade name que armazena "machine".
+    Nesta bateria de exercícios vimos que marcas armazena um array no qual o segundo item é "Sony", um dos gêneros da banda Led Zeppelin é Rock e que a propriedade moveLearnMethod do Articuno contém um objeto com uma propriedade name que armazena "machine".
 
     Dica: 
 
     Use interpolações.
 */
 
-const paragrafo = `Nesta bateria de exercícios vimos que marca armazena um array no qual o segundo item é '${marca[1]}', um dos gêneros da banda '${banda.nome}' é '${banda.generos[5]}' e que a propriedade moveLearnMethod do Articuno contém um objeto com uma propriedade name que armazena '${pokemon.moves[0].versionGroupDetails[1].moveLearnMethod.name}'.`;
+const nomeDoMovimentoDoPokemon = `'${pokemon.moves[0].versionGroupDetails[1].moveLearnMethod.name}'`;
+
+const paragrafo = `Nesta bateria de exercícios vimos que marcas armazena um array no qual o segundo item é '${marcas[1]}', um dos gêneros da banda '${banda.nome}' é '${banda.generos[5]}' e que a propriedade moveLearnMethod do Articuno contém um objeto com uma propriedade name que armazena ${nomeDoMovimentoDoPokemon}.`;
 
 console.log(`Paragrafo: ${paragrafo}`);
