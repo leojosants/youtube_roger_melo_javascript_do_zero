@@ -1,26 +1,30 @@
 /*
-    let numero = 7;
+    let numero = 1;
 
-    numero += 5;
-    numero -= 3;
-    numero *= 2;
-    numero /= 2;
-    numero--;
-    numero++;
+    function incrementa() {
+        return numero++;
+    }
 
+    console.log(numero);
+    console.log(incrementa());
     console.log(numero);
 */
 
 /*
-    const x = '1';
+    function x() {
+        const minhaConst = 'valor';
+        const frase = `A const 'minhaConst' tem o valor: ${minhaConst}`;
+        console.log(frase);
+    }
 
-    console.log('x == 1...:', x == 1);
-    console.log('x === 1..:', x === 1);
-    console.log('x != "2".:', x != '2');
-    console.log('x !== "2":', x !== '1');
+    x();
 */
 
-console.log('7 > 3:', 7 > 3);
-console.log('7 >= 3:', 7 >= 3);
-console.log('7 < 3:', 7 < 3);
-console.log('7 <= 3:', 7 <= 3);
+function pegarNome() {
+    const nome = 'Leonardo'; // escopo local
+    return nome;
+}
+
+const nome = pegarNome(); // escobo global
+
+console.log('Nome:', nome);
