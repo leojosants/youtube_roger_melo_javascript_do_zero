@@ -1,61 +1,33 @@
 /*
-    const listaCompras = ['abacaxi', 'maças', 'torradas'];
+    const trimestres = [
+        ['Janeiro', 'Fevereiro', 'Março'],
+        ['Abril', 'Maio', 'Junho'],
+        ['Julho', 'Agosto', 'Setembro'],
+    ];
 
-    console.log(listaCompras);
+    trimestres[3] = ['Outubro', 'Novembro', 'Dezembro'];
 
-    console.log(listaCompras[0]);
-    console.log(listaCompras[1]);
-    console.log(listaCompras[2]);
-    console.log(listaCompras[1 + 1]);
-
-    listaCompras[0] = 'limão';
-
-    console.log(listaCompras);
+    console.log(trimestres);
+    console.log(trimestres[2][1]);
+    console.log(trimestres[2][1][0]);
 */
 
 /*
-    const compras = [];
+    const pokemon = {
+        nome: 'Picachu',
+        tipos: ['Fogo', 'Voador'],
+    };
 
-    console.log(compras);
-
-    compras[0] = 'abacaxi';
-
-    console.log(compras);
+    console.log(pokemon);
+    console.log(pokemon.nome);
+    console.log(pokemon['nome']);
+    console.log(pokemon.tipos[1]);
 */
 
-/*
-    const jogo = {
-        nome: 'The Last of Us Part II',
-        ano: 2020,
-    }
+const cidade = {
+    nome: 'SJDR',
+    climaEnsolarado: false,
+}
 
-    const informacoesJogo = ['The Last of Us Part II', 2020];
-
-    console.log(jogo.ano);
-    console.log(informacoesJogo[1]);
-*/
-
-const series = [
-    {
-        nome: 'Chernobyl',
-        ano: 2019,
-    },
-    {
-        nome: 'Braking Bad',
-        ano: 2009,
-    },
-];
-
-series[1].ano = 2010;
-series[0].emissora = 'HBO';
-series[1].emissora = 'Max';
-
-console.log(series);
-console.log(series[0].nome);
-console.log(series[0].ano);
-console.log(series[0].emissora);
-console.log(series[0]);
-console.log(series[1]);
-console.log(series[1].nome);
-console.log(series[1].ano);
-console.log(series[1].emissora);
+console.log(cidade);
+console.log(cidade.climaEnsolarado);
