@@ -1,57 +1,46 @@
 /*
-    function somar(x, y) {
-        return x + y;
-    }
+    const x = () => { };
 
-    console.log(somar(1, 2));
-    console.log(somar(3, 2));
+    x();
 */
 
 /*
-    function dobrar(x) {
-    return x * 2;
+    function pegaMensagem(nome) {
+        return `Meu nome é ${nome}!`;
     }
 
-    console.log(dobrar(2));
-    console.log(dobrar(3));
+    const pegaMensagem2 = (nome) => {
+        return `Meu nome é ${nome}!`;
+    }
+
+    const pegaMensagem3 = (nome) => `Meu nome é ${nome}!`;
+
+    const nome = 'Leonardo';
+    const nome2 = 'Leo';
+    const nome3 = 'João';
+
+    console.log(pegaMensagem(nome));
+    console.log(pegaMensagem2(nome2));
+    console.log(pegaMensagem3(nome3));
 */
 
 /*
-    function x(y) {
-        return y;
+    const pegaObj = (param1, param2) => {
+        return {
+            prop1: param1,
+            prop2: param2,
+        };
     }
 
-    console.log(
-        x({ prop: 1 })
-    );
+    const pegaObj2 = (param1, param2) => ({ prop1: param1, prop2: param2 });
 
-    console.log(
-        x([1, 2, 3])
-    );
-
-    console.log(
-        x(7 + 7)
-    );
+    console.log(pegaObj(1, 2));
+    console.log(pegaObj2(1, 2));
 */
 
-/*
-    function x(y) {
-        return y;
-    }
+const pegaMensagem = (nome) => `Meu nome é ${nome}!`;
+const pegaMensagem2 = nome => `Meu nome é ${nome}!`;
+const nome = 'Leo';
 
-    console.log(x());
-*/
-
-/*
-    function x(y) {
-        return y + 1;
-    }
-
-    console.log(x());
-*/
-
-// função tradicional
-function nomeDaFuncao1() { }
-
-// função arrow
-const nomeDaFuncao2 = () => { }
+console.log(pegaMensagem(nome));
+console.log(pegaMensagem2(nome));
