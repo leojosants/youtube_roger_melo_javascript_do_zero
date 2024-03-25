@@ -1,30 +1,57 @@
 /*
-    let numero = 1;
-
-    function incrementa() {
-        return numero++;
+    function somar(x, y) {
+        return x + y;
     }
 
-    console.log(numero);
-    console.log(incrementa());
-    console.log(numero);
+    console.log(somar(1, 2));
+    console.log(somar(3, 2));
 */
 
 /*
-    function x() {
-        const minhaConst = 'valor';
-        const frase = `A const 'minhaConst' tem o valor: ${minhaConst}`;
-        console.log(frase);
+    function dobrar(x) {
+    return x * 2;
     }
 
-    x();
+    console.log(dobrar(2));
+    console.log(dobrar(3));
 */
 
-function pegarNome() {
-    const nome = 'Leonardo'; // escopo local
-    return nome;
-}
+/*
+    function x(y) {
+        return y;
+    }
 
-const nome = pegarNome(); // escobo global
+    console.log(
+        x({ prop: 1 })
+    );
 
-console.log('Nome:', nome);
+    console.log(
+        x([1, 2, 3])
+    );
+
+    console.log(
+        x(7 + 7)
+    );
+*/
+
+/*
+    function x(y) {
+        return y;
+    }
+
+    console.log(x());
+*/
+
+/*
+    function x(y) {
+        return y + 1;
+    }
+
+    console.log(x());
+*/
+
+// função tradicional
+function nomeDaFuncao1() { }
+
+// função arrow
+const nomeDaFuncao2 = () => { }
