@@ -68,9 +68,7 @@ const resultadoExercicio3 = multiplicaValores(numero5, numero7);
 */
 
 const pegaNumerosImpares = () => [5, 3, 9];
-const numero3 = pegaNumerosImpares()[1];
-const numero9 = pegaNumerosImpares()[2];
-const resultadoExercicio4 = multiplicaValores(numero3, numero9);
+const resultadoExercicio4 = multiplicaValores(pegaNumerosImpares()[1], pegaNumerosImpares()[2]);
 
 /*
     05
@@ -100,9 +98,7 @@ const pegaObj = () => {
     ]
 };
 
-const numero2 = pegaObj()[0].numero;
-const numero6 = pegaObj()[2].numero;
-const resultadoExercicio5 = multiplicaValores(numero2, numero6);
+const resultadoExercicio5 = multiplicaValores(pegaObj()[0].numero, pegaObj()[2].numero);
 
 /*
     06
@@ -134,13 +130,13 @@ const pegaRespostasUsuario = () => ['A', 'B', 'A', 'D'];
     Na última linha dentro do bloco da função, retorne pontuacao.
 
     const pegaPontuacao = (respostasUsuario) => {
-        const letraD = respostasUsuario[3];
+        const respostaDoUsuarioletraD = respostasUsuario[3];
         let pontuacao = 0;
 
-        if (letraD === 'A') {
+        if (respostaDoUsuarioletraD === 'A') {
             pontuacao += 50;
         }
-        else if (letraD === 'C') {
+        else if (respostaDoUsuarioletraD === 'C') {
             pontuacao += 25;
         }
         else {
@@ -149,21 +145,42 @@ const pegaRespostasUsuario = () => ['A', 'B', 'A', 'D'];
 
         return pontuacao;
     };
+
+    const pegaPontuacao = (respostasUsuario) => {
+        const respostaDoUsuarioletraD = respostasUsuario[3];
+        const pontuacao = 0;
+    
+        if (respostaDoUsuarioletraD === 'A') {
+            return pontuacao + 50;
+        }
+        else if (respostaDoUsuarioletraD === 'C') {
+            return pontuacao + 25;
+        }
+        else {
+            return pontuacao + 100;
+        }
+    };
+
+    const pegaPontuacao = (respostasUsuario) => {
+        const respostaDoUsuarioletraD = respostasUsuario[3];
+    
+        if (respostaDoUsuarioletraD === 'A') {
+            return 50;
+        }
+        else if (respostaDoUsuarioletraD === 'C') {
+            return 25;
+        }
+        else {
+            return 100;
+        }
+    };
 */
 
 const pegaPontuacao = (respostasUsuario) => {
-    const letraD = respostasUsuario[3];
-    const pontuacao = 0;
-
-    if (letraD === 'Ae') {
-        return pontuacao + 50;
-    }
-    else if (letraD === 'Ce') {
-        return pontuacao + 25;
-    }
-    else {
-        return pontuacao + 100;
-    }
+    const respostaDoUsuarioletraD = respostasUsuario[3];
+    if (respostaDoUsuarioletraD === 'A') return 50;
+    if (respostaDoUsuarioletraD === 'C') return 25;
+    return 100;
 };
 
 /*
@@ -178,7 +195,7 @@ const pegaPontuacao = (respostasUsuario) => {
 */
 
 const respostasUsuario = pegaRespostasUsuario();
-console.log(pegaPontuacao(respostasUsuario))
+console.log(pegaPontuacao(respostasUsuario));
 
 /*
     09
@@ -194,7 +211,7 @@ console.log(pegaPontuacao(respostasUsuario))
     O único requisito para você usar return é ele estar dentro de uma função.
 
     const pegaPontuacao = (respostasUsuario) => {
-        const letraD = respostasUsuario[3];
+        const respostaDoUsuarioletraD = respostasUsuario[3];
         const pontuacao = 0;
 
         if (letraD === 'A') {
