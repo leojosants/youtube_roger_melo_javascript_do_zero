@@ -1,61 +1,17 @@
-/*
-    let ehMaiorDeIdade = null;
-    const idade = 18;
+/* not
+    const x = 3;
+    const resultado = (x !== 3);
 
-    console.log(ehMaiorDeIdade);
-
-    if (idade>=18) {
-        ehMaiorDeIdade = true;
-    }
-    else {
-        ehMaiorDeIdade = false;
-    }
-
-    console.log(ehMaiorDeIdade);
+    console.log(resultado);
+    console.log(!resultado);
 */
 
-/*
-    const pegaMaiorIdade = (idade) => {
-        if (idade >= 18) return true;
-        return false;
+/* truthy e falsy 
+    if (truthy - é o retorno da verificação por baixo dos panos) {
+        // condição será executada
     }
 
-    const idade17 = 17;
-    const idade18 = 18;
-
-    console.log(pegaMaiorIdade(idade17));
-    console.log(pegaMaiorIdade(idade18));
+    if (falsy - é o retorno da verificação por baixo dos panos) {
+        // condição não será executada
+    }
 */
-
-/* 
-    let x;
-
-    // undefined
-    console.log(x === undefined);
-*/
-
-/*
-    const x = (y) => console.log(y);
-
-    // undefined
-    console.log(x() === undefined);
-*/
-
-/*
-    const pegaEmail = (email) => {
-        // return `email: ${email}`;
-
-        // undefined
-        `email: ${email}`;
-    };
-
-    console.log(pegaEmail('leo@gmail.com'));
-*/
-
-const musica = {
-    nome: 'Nome da musica',
-    banda: 'Nome da banda',
-};
-
-// undefined
-console.log(musica.ano === undefined);
