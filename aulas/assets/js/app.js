@@ -1,37 +1,26 @@
 /*
-    const obj = {
-        prop: 'x',
-    };
+    const numeros = [10, 20, 30];
 
-    console.log('obj.prop:', obj.prop);
-
-    const y = () => {
-        obj.prop = 'y'
-    };
-
-    y();
-
-    console.log('obj.prop:', obj.prop);
+    console.log('Números..:', numeros);
+    console.log('10 existe?', numeros.includes(10));
+    console.log('20 existe?', numeros.includes(20));
+    console.log('30 existe?', numeros.includes(30));
+    console.log('40 existe?', numeros.includes(40));
 */
 
 /*
-    const numeros = [1, 2, 3];
-    let resultado = 0;
+    const mensagem = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo tempora commodi voluptatem quidem corrupti neque autem non amet, culpa provident sapiente aperiam voluptate ipsum asperiores natus quibusdam fugit atque magni!`;
 
-    console.log('Resultado:', resultado);
-
-    for (let i = 0; i < numeros.length; i++) {
-        resultado += numeros[i];
-    }
-
-    console.log('Resultado:', resultado);
+    console.log('Mensagem......:', mensagem);
+    console.log(`'fugit' existe?`, mensagem.includes('fugit'));
+    console.log(`'teste' existe?`, mensagem.includes('teste'));
 */
 
-const numeros = [10, 20, 30];
+const strings = ['1', '1', '2'];
 
-numeros.forEach((item, index, array) => {
-    console.log('Item...:', item);
-    console.log('Index..:', index);
-    console.log('Array..:', array);
-    console.log('\n');
-});
+console.log('Strings:', strings);
+
+// checar se todos os itens do array correponde a uma comparação
+const resultado = strings.every((string) => string === '1');
+
+console.log(`Todos os elementos do array 'strings' são iguais a '1'?`, resultado);
