@@ -1,18 +1,37 @@
-const numeros = [10, 20, 30, 40, 50];
-const somaNumerosSemFOR = numeros[0] + numeros[1] + numeros[2] + numeros[3] + numeros[4];
-let somaNumerosComFOR = 0;
+/*
+    const obj = {
+        prop: 'x',
+    };
 
-console.log('Elementos do array........:', numeros);
-console.log('Tamanho do array..........:', numeros.length);
+    console.log('obj.prop:', obj.prop);
 
-for (let i = 0; i < numeros.length; i++) {
-    somaNumerosComFOR += numeros[i];
-}
+    const y = () => {
+        obj.prop = 'y'
+    };
 
-numeros.push(6);
+    y();
 
-console.log('Elementos do array........:', numeros);
-console.log('Tamanho do array..........:', numeros.length);
+    console.log('obj.prop:', obj.prop);
+*/
 
-console.log('Soma dos números sem FOR..:', somaNumerosSemFOR);
-console.log('Soma dos números com FOR..:', somaNumerosComFOR);
+/*
+    const numeros = [1, 2, 3];
+    let resultado = 0;
+
+    console.log('Resultado:', resultado);
+
+    for (let i = 0; i < numeros.length; i++) {
+        resultado += numeros[i];
+    }
+
+    console.log('Resultado:', resultado);
+*/
+
+const numeros = [10, 20, 30];
+
+numeros.forEach((item, index, array) => {
+    console.log('Item...:', item);
+    console.log('Index..:', index);
+    console.log('Array..:', array);
+    console.log('\n');
+});
