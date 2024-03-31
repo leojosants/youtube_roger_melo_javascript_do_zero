@@ -1,94 +1,86 @@
-/* spreed não copia objeto aninhado 
-    const obj1 = {
-        prop1: 1,
-        prop2: 2,
-        prop3: [1, 2, 3],
+/* 
+    const obj = {
+        nOme_dAChave_semPADrao: 'sssss',
     };
 
-    const obj2 = {
-        ...obj1,
-        prop: 'x',
-    };
+    console.log('obj:', obj);
 
-    console.log('obj1:', obj1);
-    console.log('obj2:', obj2);
-    console.log('obj1 === obj2:', obj1 === obj2);
+    const pegaMensagem1 = ({ nOme_dAChave_semPADrao}) => `Chave recebida: ${nOme_dAChave_semPADrao}`;
 
-    obj2.prop3.push(4);
+    const pegaMensagem2 = ({ nOme_dAChave_semPADrao: nomeDaChavePadronizado }) => `Chave recebida renomeado: ${nomeDaChavePadronizado}`;
 
-    console.log('obj1:', obj1);
-    console.log('obj2:', obj2);
-    console.log('obj2.prop3 === obj1.prop3:', obj2.prop3 === obj1.prop3);
+    console.log(pegaMensagem1(obj));
+    console.log(pegaMensagem2(obj));
+
 */
 
-/* spreed não copia objeto aninhado - solução 1 
-    const obj1 = {
-        prop1: 1,
-        prop2: 2,
-        prop3: [1, 2, 3],
+/* 
+    const config = {
+        formatoModulo: 'esm',
+        futuro: {
+            v2Headers: true,
+            v2Meta: true,
+        },
     };
 
-    console.log('obj1:', obj1);
+    const pegaMensagem = ({ futuro }) => `v2Meta é true? ${futuro.v2Meta === true}`;
+    const mensagem = pegaMensagem(config);
 
-    const obj2 = {
-        ...obj1,
-        prop3: [...obj1.prop3,4],
-    };
-
-    console.log('obj2:', obj2);
-    console.log('obj1 === obj2:', obj1 === obj2);
-    console.log('obj1:', obj1);
-    console.log('obj2:', obj2);
-    console.log('obj2.prop3 === obj1.prop3:', obj2.prop3 === obj1.prop3);
+    console.log(mensagem);
 */
 
-/* spreed não copia objeto aninhado - solução 2 (structuredClone) 
-    const obj1 = {
-        prop1: 1,
-        prop2: 2,
-        prop3: [1, 2, 3],
-    };
+/* 
+    const arr = [
+        5,
+        (num) => num * 2,
+    ];
 
-    console.log('obj1:', obj1);
+    console.log(arr);
 
-    const obj2 = structuredClone(obj1);
+    // const numero = arr[0];
+    // const dobrarFN = arr[1];
+    const [numero, dobrarFN] = arr;
 
-    console.log('obj2:', obj2);
-    console.log('obj1 === obj2:', obj1 === obj2);
-
-    obj2.prop3.push(4);
-
-    console.log('obj1:', obj1);
-    console.log('obj2:', obj2);
-    console.log('obj2.prop3 === obj1.prop3:', obj2.prop3 === obj1.prop3);
+    console.log('numero:', numero);
+    console.log('dobrarFN:', dobrarFN(4));
 */
 
-/* destruct */
-const playlist = {
-    nome: 'JavaScript do zero (curso para iniciantes)',
-    videos: 34,
-    visualizacoes: 7.059,
-    visibilidade: 'Pública',
+/* 
+    const pegaNomeCompleto = ([nome, sobrenome]) => `${nome} ${sobrenome}`;
+    const arr = ['Leo', 'Santos'];
+    const nomeCompleto = pegaNomeCompleto(arr);
+
+    console.log('nomeCompleto:', nomeCompleto);
+*/
+
+/* 
+    const getFullName = ([name, surname]) => `${name} ${surname}`;
+    const arr = ['Leo', 'Santos'];
+    const fullName = getFullName(arr);
+
+    console.log('fullName:', fullName);
+*/
+
+/* 
+    const props = {
+        prop1: 'value 1',
+    };
+
+    const propName = 'prop';
+
+    console.log('props:', props);
+    console.log('propName:', propName);
+    console.log('propName + 1:', props[propName + 1]);
+*/
+
+const getCarSales = (car) => {
+    const cars = {
+        strada: 50_000,
+        onix: 70_000,
+        polo: 56_000,
+    };
+    return cars[car] || `Não há informações do carro '${car}'`;
 };
 
-const mensagem1 = `A playlist '${playlist.nome}' está com '${playlist.videos}' vídeos e tem '${playlist.visualizacoes}' visualizações e tem visibilidade '${playlist.visibilidade}'.`;
-
-console.log('mensagem1:', mensagem1);
-
-// 
-const nome = playlist.nome;
-const videos = playlist.videos;
-const visualizacoes = playlist.visualizacoes;
-const visibilidade = playlist.visibilidade;
-
-const mensagem2 = `A playlist '${nome}' está com '${videos}' vídeos e tem '${visualizacoes}' visualizações e tem visibilidade '${visibilidade}'.`;
-
-console.log('mensagem2:', mensagem2);
-
-// destruct
-const pegaMensagem = ({ nome, videos, visualizacoes, visibilidade }) => { 
-    const mensagem3 = `A playlist '${nome}' está com '${videos}' vídeos e tem '${visualizacoes}' visualizações e tem visibilidade '${visibilidade}'.`;
-    console.log('mensagem3:', mensagem3);
-};
-
-pegaMensagem(playlist);
+console.log(getCarSales('onix'));
+console.log(getCarSales('fusca'));
