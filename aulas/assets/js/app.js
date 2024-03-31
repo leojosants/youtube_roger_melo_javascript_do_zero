@@ -1,96 +1,94 @@
-/* imutável
-    const mes = ['janeiro'];
-
-    console.log('Mês:', mes);
-    console.log(mes[0][0].toLowerCase());
-    console.log(mes[0][0] = 'J');
-    console.log('Mês:', mes);
-
-    mes[0] = 'Janeiro';
-
-    console.log('Mês:', mes);
-*/
-
-/* imutável
-    const mensagem = 'Eu sou Médico!';
-
-    console.log('Mensagem.......:', mensagem);
-
-    const novaMensagem = mensagem.replace('Médico', 'Desenvolvedor');
-
-    console.log('Nova mensagem..:', novaMensagem);
-    console.log('Mensagem.......:', mensagem);
-*/
-
-/* mutável
-    const array = ['a', 'c', 'c'];
-
-    console.log('Array:', array);
-
-    array[1] = 'b';
-
-    console.log('Array:', array);
-*/
-
-/* mutável
-    const obj = {
-        nome: 'Leo',
+/* spreed não copia objeto aninhado 
+    const obj1 = {
+        prop1: 1,
+        prop2: 2,
+        prop3: [1, 2, 3],
     };
 
-    console.log('Obj:', obj);
-
-    obj.nome = 'Leonardo';
-
-    console.log('Obj:', obj);
-*/
-
-/* passagem de valor - valor 
-    const x = {
-        prop: 1,
+    const obj2 = {
+        ...obj1,
+        prop: 'x',
     };
 
-    const y = {
-        prop: 1,
-    };
+    console.log('obj1:', obj1);
+    console.log('obj2:', obj2);
+    console.log('obj1 === obj2:', obj1 === obj2);
 
-    console.log('x......:', x);
-    console.log('y......:', y);
-    console.log('x === y:', x === y);
+    obj2.prop3.push(4);
+
+    console.log('obj1:', obj1);
+    console.log('obj2:', obj2);
+    console.log('obj2.prop3 === obj1.prop3:', obj2.prop3 === obj1.prop3);
 */
 
-/* passagem de valor - referência 
-    const x1 = {
-        prop: 1,
+/* spreed não copia objeto aninhado - solução 1 
+    const obj1 = {
+        prop1: 1,
+        prop2: 2,
+        prop3: [1, 2, 3],
     };
 
-    const y1 = x1;
+    console.log('obj1:', obj1);
 
-    console.log('x1.......:', x1);
-    console.log('y1.......:', y1);
-    console.log('x1 === y1:', x1 === y1);
+    const obj2 = {
+        ...obj1,
+        prop3: [...obj1.prop3,4],
+    };
 
-    y1.prop = 3;
-
-    console.log('x1.......:', x1);
-    console.log('y1.......:', y1);
+    console.log('obj2:', obj2);
+    console.log('obj1 === obj2:', obj1 === obj2);
+    console.log('obj1:', obj1);
+    console.log('obj2:', obj2);
+    console.log('obj2.prop3 === obj1.prop3:', obj2.prop3 === obj1.prop3);
 */
 
-/* spread */
-const x1 = {
-    prop: 1,
-}
+/* spreed não copia objeto aninhado - solução 2 (structuredClone) 
+    const obj1 = {
+        prop1: 1,
+        prop2: 2,
+        prop3: [1, 2, 3],
+    };
 
-const y1 = {
-    ...x1,
-    prop: 0,
-    prop1: 1,
+    console.log('obj1:', obj1);
+
+    const obj2 = structuredClone(obj1);
+
+    console.log('obj2:', obj2);
+    console.log('obj1 === obj2:', obj1 === obj2);
+
+    obj2.prop3.push(4);
+
+    console.log('obj1:', obj1);
+    console.log('obj2:', obj2);
+    console.log('obj2.prop3 === obj1.prop3:', obj2.prop3 === obj1.prop3);
+*/
+
+/* destruct */
+const playlist = {
+    nome: 'JavaScript do zero (curso para iniciantes)',
+    videos: 34,
+    visualizacoes: 7.059,
+    visibilidade: 'Pública',
 };
 
-console.log('x1.........:', x1);
-console.log('y1.........:', y1);
-console.log('x1 === y1..:', x1 === y1);
+const mensagem1 = `A playlist '${playlist.nome}' está com '${playlist.videos}' vídeos e tem '${playlist.visualizacoes}' visualizações e tem visibilidade '${playlist.visibilidade}'.`;
 
-y1.prop = 3;
+console.log('mensagem1:', mensagem1);
 
-console.log('x1.........:', x1);
-console.log('y1.........:', y1);
+// 
+const nome = playlist.nome;
+const videos = playlist.videos;
+const visualizacoes = playlist.visualizacoes;
+const visibilidade = playlist.visibilidade;
+
+const mensagem2 = `A playlist '${nome}' está com '${videos}' vídeos e tem '${visualizacoes}' visualizações e tem visibilidade '${visibilidade}'.`;
+
+console.log('mensagem2:', mensagem2);
+
+// destruct
+const pegaMensagem = ({ nome, videos, visualizacoes, visibilidade }) => { 
+    const mensagem3 = `A playlist '${nome}' está com '${videos}' vídeos e tem '${visualizacoes}' visualizações e tem visibilidade '${visibilidade}'.`;
+    console.log('mensagem3:', mensagem3);
+};
+
+pegaMensagem(playlist);
