@@ -1,86 +1,55 @@
 /* 
-    const obj = {
-        nOme_dAChave_semPADrao: 'sssss',
+    const getCarSales1 = (car) => {
+        const cars = {
+            strada: 50_000,
+            onix: 70_000,
+            polo: 56_000,
+        };
+        return cars[car] || `Não há informações do carro '${car}'`;
     };
 
-    console.log('obj:', obj);
+    const getCarSales2 = (car) => {
+        if (car === 'strada') {
+            return 50_000;
+        }
 
-    const pegaMensagem1 = ({ nOme_dAChave_semPADrao}) => `Chave recebida: ${nOme_dAChave_semPADrao}`;
+        if (car === 'onix') {
+            return 70_000;
+        }
 
-    const pegaMensagem2 = ({ nOme_dAChave_semPADrao: nomeDaChavePadronizado }) => `Chave recebida renomeado: ${nomeDaChavePadronizado}`;
+        if (car === 'polo') {
+            return 56_000;
+        }
 
-    console.log(pegaMensagem1(obj));
-    console.log(pegaMensagem2(obj));
-
-*/
-
-/* 
-    const config = {
-        formatoModulo: 'esm',
-        futuro: {
-            v2Headers: true,
-            v2Meta: true,
-        },
+        return `Não há informações do carro '${car}'`;
     };
 
-    const pegaMensagem = ({ futuro }) => `v2Meta é true? ${futuro.v2Meta === true}`;
-    const mensagem = pegaMensagem(config);
-
-    console.log(mensagem);
+    console.log(getCarSales1('onix'));
+    console.log(getCarSales1('fusca'));
+    console.log(getCarSales2('onix'));
+    console.log(getCarSales2('fusca'));
 */
 
 /* 
-    const arr = [
-        5,
-        (num) => num * 2,
-    ];
+    const newProp = 'Prop2';
 
-    console.log(arr);
-
-    // const numero = arr[0];
-    // const dobrarFN = arr[1];
-    const [numero, dobrarFN] = arr;
-
-    console.log('numero:', numero);
-    console.log('dobrarFN:', dobrarFN(4));
-*/
-
-/* 
-    const pegaNomeCompleto = ([nome, sobrenome]) => `${nome} ${sobrenome}`;
-    const arr = ['Leo', 'Santos'];
-    const nomeCompleto = pegaNomeCompleto(arr);
-
-    console.log('nomeCompleto:', nomeCompleto);
-*/
-
-/* 
-    const getFullName = ([name, surname]) => `${name} ${surname}`;
-    const arr = ['Leo', 'Santos'];
-    const fullName = getFullName(arr);
-
-    console.log('fullName:', fullName);
-*/
-
-/* 
     const props = {
         prop1: 'value 1',
+        [newProp]: 'value 2',
     };
 
-    const propName = 'prop';
-
-    console.log('props:', props);
-    console.log('propName:', propName);
-    console.log('propName + 1:', props[propName + 1]);
+    console.log(props);
 */
 
-const getCarSales = (car) => {
-    const cars = {
-        strada: 50_000,
-        onix: 70_000,
-        polo: 56_000,
+const getObj = (newProp) => {
+    return {
+        prop1: 'value 1',
+        // newProp: 'value 2',
+        [newProp]: 'value 2',
     };
-    return cars[car] || `Não há informações do carro '${car}'`;
 };
 
-console.log(getCarSales('onix'));
-console.log(getCarSales('fusca'));
+const newProp = 'prop 2';
+const obj = getObj(newProp);
+
+console.log('obj:', obj);
